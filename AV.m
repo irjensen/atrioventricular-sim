@@ -31,7 +31,7 @@ function out = AV(tSpace, param)
     SA = sin(freq*2*pi*tSpace);     % equation the describes the SA node.
 
     
-    for i=1:(length(tSpace)-1)           %Runge Kutta
+    for i=1:(length(tSpace)-1)           % Runge Kutta
         t =  tSpace(i);
 
         k0 = h*f(t, out.v(i), out.w(i));
@@ -47,9 +47,8 @@ function out = AV(tSpace, param)
         out.w(i+1) = out.w(i) + 1.0/6 * (l0 + 2*l1 + 2*l2 + l3);
 
         if out.v(i)<AVthresh && SA(i)>SAthresh % pulse conditional.
-            out.v(i+1) = pulseStrength;                % depolarize the AV node
-                                                       % potential.
-            out.pulses =  out.pulses + 1;              % count the conducted pulses.
+            out.v(i+1) = pulseStrength;        % depolarize the AV node potential.
+            out.pulses =  out.pulses + 1;      % count the conducted pulses.
         end
     end
 end
