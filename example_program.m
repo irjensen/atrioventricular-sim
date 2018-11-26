@@ -1,4 +1,4 @@
-%This program produces 40 frames of an animation showing the effect that varying the beta parameter has on the shape and behaviour of
+% This program produces 40 frames of an animation showing the effect that varying the beta parameter has on the shape and behaviour of
 % the AV node solution
 
 
