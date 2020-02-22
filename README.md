@@ -1,4 +1,4 @@
-# atrioventricular-sim
+# Heart Simulation
 numerical modelling of the atrioventricular node of the heart.
 The algorithm uses an attenuated exponential decay model for the depolarization of the 
 cardiac action potential described by the coupled differential equations:
